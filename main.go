@@ -1,13 +1,14 @@
 package main
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"go-fiber-restful/pkg/routers"
+)
 
 func main() {
 	app := fiber.New()
 
-	app.Get("/", func(ctx *fiber.Ctx) error {
-		return ctx.JSON("OK cheese!")
-	})
+	routers.Routers(app)
 
 	app.Listen(":3000")
 }
