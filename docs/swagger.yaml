@@ -1,0 +1,14 @@
+info:
+  contact: {}
+paths:
+  /v1/users/:
+    get:
+      consumes:
+      - application/json
+      description: Get an item by its ID
+      operationId: get-item-by-int
+      produces:
+      - application/json
+      tags:
+      - Item
+swagger: "2.0"

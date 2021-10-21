@@ -11,7 +11,8 @@ http://127.0.0.1/
 ## TODO
 - [x] docker setup
 - [ ] validation
-- [ ] router
+- [x] router
+- [x] swagger
 
 ## References
 - https://docs.gofiber.io/
