@@ -1,4 +1,6 @@
 version: '3'
+volumes:
+  go_fiber_data: {}
 services:
   fiber:
     build:
@@ -11,3 +13,14 @@ services:
     volumes:
       - $PWD:/app
     restart: always
+  postgres:
+    image: postgres:12-alpine
+    container_name: postgres
+    volumes:
+      - go_fiber_data:/var/lib/postgresql/data/:rw
+    env_file:
+      - ../environment/develop/postgres
+    ports:
+      - "5432:5432"
+    command:
+      - "--logging_collector=off"
