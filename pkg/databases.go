@@ -2,8 +2,6 @@ package pkg
 
 import (
 	"fmt"
-	"go-fiber-restful/apps/news"
-	"go-fiber-restful/apps/users"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
 	"log"
@@ -12,7 +10,7 @@ import (
 
 var DB *gorm.DB
 
-func (extendApp *ExtendApp) UseDatabase(cfg Config) {
+func UseDatabase(cfg Config) {
 
 	var dsn = fmt.Sprintf("host=%s user=%s password=%s dbname=%s", cfg.DatabaseHost, cfg.DatabaseUser, cfg.DatabasePassword, cfg.DatabaseName)
 	var err error
@@ -23,9 +21,7 @@ func (extendApp *ExtendApp) UseDatabase(cfg Config) {
 		log.Fatal("Failed to connect to database. \n", err)
 		os.Exit(2)
 	}
-}
 
-func (extendApp *ExtendApp) UseMigration() {
-	DB.Migrator().AutoMigrate(&users.User{})
-	DB.Migrator().AutoMigrate(&news.News{})
+	//DB.Migrator().AutoMigrate(&users.User{})
+	//DB.Migrator().AutoMigrate(&news.News{})
 }

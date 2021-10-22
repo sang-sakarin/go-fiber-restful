@@ -1,6 +1,10 @@
 package news
 
-import "github.com/gofiber/fiber/v2"
+import (
+	"github.com/gofiber/fiber/v2"
+	"go-fiber-restful/pkg"
+	//"go-fiber-restful/pkg"
+)
 
 // List godoc
 // @Summary
@@ -9,7 +13,10 @@ import "github.com/gofiber/fiber/v2"
 // @Router /v1/news/ [get]
 // @Success 200 {string} Token "Test"
 func List(c *fiber.Ctx) error {
-	return c.Send([]byte("All News"))
+	var news []News
+	pkg.DB.Find(&news)
+
+	return c.JSON(news)
 }
 
 func Create(c *fiber.Ctx) error {

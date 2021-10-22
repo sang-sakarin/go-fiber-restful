@@ -10,8 +10,12 @@ func (extendApp *ExtendApp) ApplySetting(app *fiber.App) {
 	env.Parse(&cfg)
 
 	// Use database
-	extendApp.UseDatabase(cfg)
+	//extendApp.UseDatabase(cfg)
+
+	UseDatabase(cfg)
+
+	//routers.UseMigration()
 
 	// Use migration
-	extendApp.UseMigration()
+	//extendApp.UseMigration()
 }
