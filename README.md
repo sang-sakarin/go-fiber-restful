@@ -13,6 +13,10 @@ http://127.0.0.1/
 - [ ] validation
 - [x] router
 - [x] swagger
+- [x] gorm
+- [x] database migration
+- [ ] crud api
 
 ## References
 - https://docs.gofiber.io/
+- https://gorm.io/
