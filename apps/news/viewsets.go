@@ -2,7 +2,7 @@ package news
 
 import (
 	"github.com/gofiber/fiber/v2"
-	"go-fiber-restful/pkg"
+	"go-fiber-restful/pkg/databases"
 	//"go-fiber-restful/pkg"
 )
 
@@ -14,7 +14,9 @@ import (
 // @Success 200 {string} Token "Test"
 func List(c *fiber.Ctx) error {
 	var news []News
-	pkg.DB.Find(&news)
+
+	db := databases.DBConn
+	db.Find(&news)
 
 	return c.JSON(news)
 }

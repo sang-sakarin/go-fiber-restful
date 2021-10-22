@@ -1,4 +1,4 @@
-package routers
+package pkg
 
 import (
 	swagger "github.com/arsmn/fiber-swagger/v2"
@@ -10,7 +10,7 @@ import (
 
 func Routers(app *fiber.App) {
 
-	app.Get("/swagger/*", swagger.Handler)
+	app.Get("/docs/*", swagger.Handler)
 
 	v1 := app.Group("v1")
 
@@ -22,4 +22,5 @@ func Routers(app *fiber.App) {
 	_news.Get(":id", news.Retrieve)
 	_news.Patch(":id", news.Update)
 	_news.Delete(":id", news.Delete)
+
 }

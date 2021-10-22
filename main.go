@@ -3,7 +3,6 @@ package main
 import (
 	"github.com/gofiber/fiber/v2"
 	"go-fiber-restful/pkg"
-	"go-fiber-restful/pkg/routers"
 )
 
 func main() {
@@ -13,7 +12,7 @@ func main() {
 
 	extendApp.ApplySetting(app)
 
-	routers.Routers(app)
+	pkg.Routers(app)
 
 	app.Listen(":3000")
 }
