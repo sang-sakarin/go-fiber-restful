@@ -2,6 +2,7 @@ package pkg
 
 import (
 	"fmt"
+	"go-fiber-restful/apps/news"
 	"go-fiber-restful/apps/users"
 	"gorm.io/driver/postgres"
 	"gorm.io/gorm"
@@ -26,4 +27,5 @@ func (extendApp *ExtendApp) UseDatabase(cfg Config) {
 
 func (extendApp *ExtendApp) UseMigration() {
 	DB.Migrator().AutoMigrate(&users.User{})
+	DB.Migrator().AutoMigrate(&news.News{})
 }
