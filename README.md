@@ -8,6 +8,9 @@ example folder structure
 ## Access
 http://127.0.0.1/
 
+## Generate Swaggers
+`$ swag init`
+
 ## TODO
 - [x] docker setup
 - [ ] validation
@@ -20,3 +23,4 @@ http://127.0.0.1/
 ## References
 - https://docs.gofiber.io/
 - https://gorm.io/
+- https://github.com/swaggo/swag

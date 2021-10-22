@@ -1,6 +1,16 @@
 info:
   contact: {}
 paths:
+  /v1/news/:
+    get:
+      description: List news
+      responses:
+        "200":
+          description: Test
+          schema:
+            type: string
+      tags:
+      - News
   /v1/users/:
     get:
       consumes:

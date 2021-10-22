@@ -6,9 +6,9 @@ require (
 	github.com/andybalholm/brotli v1.0.3 // indirect
 	github.com/arsmn/fiber-swagger/v2 v2.17.0
 	github.com/caarlos0/env v3.5.0+incompatible
+	github.com/cpuguy83/go-md2man/v2 v2.0.1 // indirect
 	github.com/go-openapi/spec v0.20.4 // indirect
 	github.com/gofiber/fiber/v2 v2.20.2
-	github.com/joho/godotenv v1.4.0
 	github.com/klauspost/compress v1.13.6 // indirect
 	github.com/mailru/easyjson v0.7.7 // indirect
 	github.com/swaggo/swag v1.7.3
