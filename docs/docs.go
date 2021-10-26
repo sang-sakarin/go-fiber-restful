@@ -23,6 +23,22 @@ var doc = `{
     "host": "{{.Host}}",
     "basePath": "{{.BasePath}}",
     "paths": {
+        "/v1/news/": {
+            "get": {
+                "description": "List news",
+                "tags": [
+                    "News"
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Test",
+                        "schema": {
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        },
         "/v1/users/": {
             "get": {
                 "description": "Get an item by its ID",
